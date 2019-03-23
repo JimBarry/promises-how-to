@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>promises how to</title>
+    
+    <script>
+      
+      function addTwoNumbers(numFirst, numSecond) {
+        
+        var twoNumbersAdded = numFirst + numSecond;
+        return twoNumbersAdded;
+        
+      }
+      
+      function addWithoutPromises(numFirst, numSecond) {
+        
+        var numReturnAdded = addTwoNumbers(numFirst, numSecond);
+        return numReturnAdded;
+                
+      }
+      
+      function printAddedNumbersWithoutPromises() {
+
+        var numToPrint = addWithoutPromises(1, 2);
+        document.getElementById('add_result_without_promises').innerHTML = numToPrint;
+        
+      }
+
+      function addWithPromises(numFirst, numSecond) {
+        var promise = new Promise();
+          addTwoNumbers(numFirst, numSecond).then(function (numReturnAdded) {
+            promise.resolve(numReturnAdded);            
+          });
+        return promise;
+      }
+      
+      function printAddedNumbersWithPromises() {
+        
+        var numToPrint = addWithPromises(1, 2);
+        document.getElementById('add_result_with_promises').innerHTML = numToPrint;
+        
+      }
+
+    </script>    
+  </head>
+
+  <body>
+    <h2>Promises Made Simple</h2>
+    <button type="button" onclick="printAddedNumbersWithoutPromises()">Add 1 + 2 without Promises</button>
+    <h2 id="add_result_without_promises">XX</h2>
+    <button type="button" onclick="printAddedNumbersWithPromises()">Add 1 + 2 with Promises</button>
+    <h2 id="add_result_with_promises">XX</h2>
+  </body>
+  
+</html>
