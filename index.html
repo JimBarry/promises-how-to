@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html> 
-  <head>  
+<html>
+  
+  <head>
+    
     <script>
+
       var a = 1;
       var b = 2;
       
       // function that simply adds two numbers
       function addTwoNumbers(numFirst, numSecond) {
-        
+
+        // add the two input numbers
         var twoNumbersAdded = numFirst + numSecond;
-        return twoNumbersAdded;
         
+        // return the result
+        return twoNumbersAdded;
       }
       
       // function that calls the adding function, and then alerts the result
       function addWithoutPromises(numFirst, numSecond) {
-        
+
+        // add two numbers by passing to a function that adds them
         var numReturnAdded = addTwoNumbers(a, b);
+
+        // display the result in an alert box
         alert(numReturnAdded);
-                
       }
 
       // function that calls the adding function, not sure if/when it'll respond
       function addWithPromises(numFirst, numSecond) {
-        
+
+        // add two numbers by passing to a function that adds them,
+        // but wrap that function call inside a promise
         var promise = new Promise(function(resolve, reject) {
           resolve(addTwoNumbers(a, b));
         });
 
+        // when the promise resolves itself, display the result in an alert box
         promise.then(function(result) {
           alert(result);
         });
-
       }
-    </script>      
+
+    </script>
+        
   </head>
   
   <body>
