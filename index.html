@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- with indents fixed a bit -->
-
-    <title>promises how to</title>
-    
+<html> 
+  <head>  
     <script>
+      var a = 1;
+      var b = 2;
       
+      // function that simply adds two numbers
       function addTwoNumbers(numFirst, numSecond) {
         
         var twoNumbersAdded = numFirst + numSecond;
@@ -14,44 +13,32 @@
         
       }
       
+      // function that calls the adding function, and then alerts the result
       function addWithoutPromises(numFirst, numSecond) {
         
-        var numReturnAdded = addTwoNumbers(numFirst, numSecond);
-        return numReturnAdded;
+        var numReturnAdded = addTwoNumbers(a, b);
+        alert(numReturnAdded);
                 
       }
-      
-      function printAddedNumbersWithoutPromises() {
 
-        var numToPrint = addWithoutPromises(1, 2);
-        document.getElementById('add_result_without_promises').innerHTML = numToPrint;
-        
-      }
-
+      // function that calls the adding function, not sure if/when it'll respond
       function addWithPromises(numFirst, numSecond) {
-        var promise = new Promise();
-          addTwoNumbers(numFirst, numSecond).then(function (numReturnAdded) {
-            promise.resolve(numReturnAdded);            
-          });
-        return promise;
-      }
-      
-      function printAddedNumbersWithPromises() {
         
-        var numToPrint = addWithPromises(1, 2);
-        document.getElementById('add_result_with_promises').innerHTML = numToPrint;
-        
-      }
+        var promise = new Promise(function(resolve, reject) {
+          resolve(addTwoNumbers(a, b));
+        });
 
-    </script>    
+        promise.then(function(result) {
+          alert(result);
+        });
+
+      }
+    </script>      
   </head>
-
+  
   <body>
     <h2>Promises Made Simple</h2>
-      <button type="button" onclick="printAddedNumbersWithoutPromises()">Add 1 + 2 without Promises</button>
-    <h2 id="add_result_without_promises">XX</h2>
-      <button type="button" onclick="printAddedNumbersWithPromises()">Add 1 + 2 with Promises</button>
-    <h2 id="add_result_with_promises">XX</h2>
+    <button type="button" onclick="addWithoutPromises()">Add 1 + 2 without Promises</button>
+    <button type="button" onclick="addWithPromises()">Add 1 + 2 with Promises</button>
   </body>
-  
 </html>
