@@ -22,10 +22,10 @@
       function addWithoutPromises(numFirst, numSecond) {
 
         // add two numbers by passing to a function that adds them
-        var numReturnAdded = addTwoNumbers(a, b);
+        var numsAdded = addTwoNumbers(a, b);
 
         // display the result in an alert box
-        alert(numReturnAdded);
+        alert(numsAdded);
       }
 
       // function that calls the adding function, not sure if/when it'll respond
@@ -34,7 +34,8 @@
         // add two numbers by passing to a function that adds them,
         // but wrap that function call inside a promise
         var promise = new Promise(function(resolve, reject) {
-          resolve(addTwoNumbers(a, b));
+          var numsAdded = addTwoNumbers(a, b);
+          resolve(numsAdded);
         });
 
         // when the promise resolves itself, display the result in an alert box
