@@ -1,57 +1,38 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <title>Promises How-to</title>
-    
+<html>  
+  <head><title>Promises How-to</title>
     <script>
-
+      
       var a = 1;
       var b = 2;
       
       // function that simply adds two numbers
       function addTwoNumbers(numFirst, numSecond) {
 
-        // add the two input numbers
         var twoNumbersAdded = numFirst + numSecond;
         
-        // return the result
         return twoNumbersAdded;
       }
-      
-      // function that calls the adding function, and then alerts the result
-      function addWithoutPromises(numFirst, numSecond) {
 
-        // add two numbers by passing to a function that adds them
-        var numsAdded = addTwoNumbers(a, b);
+      // function that calls the adding function
+      function addThem(numFirst, numSecond) {
 
-        // display the result in an alert box
-        alert(numsAdded);
-      }
+//     var myPromiseObject = new Promise(function(resolve, reject) {        
+         var numsAdded = addTwoNumbers(a, b);
+//       resolve(numsAdded);
+//     });
 
-      // function that calls the adding function, not sure if/when it'll respond
-      function addWithPromises(numFirst, numSecond) {
-
-        // add two numbers by passing to a function that adds them,
-        // but wrap that function call inside a promise
-        var promise = new Promise(function(resolve, reject) {
-          var numsAdded = addTwoNumbers(a, b);
-          resolve(numsAdded);
-        });
-
-        // when the promise resolves itself, display the result in an alert box
-        promise.then(function(result) {
-          alert(result);
-        });
-      }
-
+//     myPromiseObject.then(function(result) {
+//       var numsAdded = result;
+         alert(numsAdded);
+//     });
+      } 
+// to make Promises work, uncomment these lines: 19 21 22 24 25 27
     </script>
         
   </head>
   
   <body>
     <h2>Promises Made Simple</h2>
-    <button type="button" onclick="addWithoutPromises()">Add 1 + 2 without Promises</button>
-    <button type="button" onclick="addWithPromises()">Add 1 + 2 with Promises</button>
+    <button type="button" onclick="addThem()">Add Them</button>
   </body>
 </html>
