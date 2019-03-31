@@ -1,5 +1,5 @@
 If you have your own web server, download and use the <a href="https://github.com/JimBarry/promises-how-to/blob/master/index.html"> index.html from this repo.</a><p> 
-If you do not, then you can use this: <a href="https://codepen.io/JimBarry/pen/YgmLEz"> Codepen.io sample here</a><p>
+If you do not have your own web server, then you can use this: <a href="https://codepen.io/JimBarry/pen/YgmLEz"> Codepen.io sample here</a><p>
 Either way, now follow along...
 
 # STEP 1: A SIMPLE VANILLA FUNCTION CALL
