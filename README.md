@@ -4,6 +4,7 @@
 ### STEP 2 
 ...does the same thing as STEP 1, except it uses Promises to ensure that a result is returned before it's passed to the alert() box.
 
+### PREP 
 
 If you have your own web server, download and use the <a href="https://github.com/JimBarry/promises-how-to/blob/master/index.html"> index.html from this repo.</a><p> 
 If you do not have your own web server, then you can use this: <a href="https://codepen.io/JimBarry/pen/jJgNBd"> Codepen.io sample here</a><p>
