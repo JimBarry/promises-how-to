@@ -1,6 +1,8 @@
-## STEP 1 shows a basic function call without promises. We simply take two numbers, add them together, and send the result to an alert() box.
+### STEP 1 
+...shows a basic function call without promises. We simply take two numbers, add them together, and send the result to an alert() box.
 
-## STEP 2 does the same thing as STEP 1, except it uses Promises to ensure that a result is returned before it's passed to the alert() box.
+### STEP 2 
+...does the same thing as STEP 1, except it uses Promises to ensure that a result is returned before it's passed to the alert() box.
 
 
 If you have your own web server, download and use the <a href="https://github.com/JimBarry/promises-how-to/blob/master/index.html"> index.html from this repo.</a><p> 
