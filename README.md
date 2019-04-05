@@ -21,7 +21,7 @@ Run the `index.html` as-is (leaving the Promises stuff commented out). What's le
 Lines 5 and 6: Let's set up some values we're going to add together, a=1 and b=2.<br>
 Line 35: Here's an HTML button, that when clicked, calls the `addThem()` function.<br>
 Line 17: When the user clicks the button, this `addThem()` function runs.<br>
-Line 20: The values a and b are handed off to the `addTwoNumbers()` function.<br>
+Line 20: The values `a` and `b` are handed off to the `addTwoNumbers()` function.<br>
 Line 9: The value `a` is referenced inside the `addTwoNumbers()` function as the parameter `numFirst`.<br>
 Line 9: The value `b` is referenced inside the `addTwoNumbers()` function as the parameter `numSecond`.<br>
 Line 11: The two input values are added together, and a `3` is put into the variable `twoNumbersAdded`.<br>
