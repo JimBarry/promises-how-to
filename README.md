@@ -1,12 +1,12 @@
 ### STEP 1 
-...shows a basic JavaScript function call without promises. We simply take two numbers, add them together, and send the result to an alert() box.  1 + 2 = 3, piece o'cake.
+...shows a basic JavaScript function call without promises. We simply take two numbers, add them together, and send the result to an `alert()` box.  `1 + 2 = 3`, piece o'cake.
 
 ### STEP 2 
-...does the same thing as STEP 1, except it uses Promises to ensure that this "1 + 2 = 3" result is returned <strong>before</strong> it's passed to the alert() box.
+...does the same thing as STEP 1, except it uses Promises to ensure that this "`1 + 2 = 3`" result is returned <strong>before</strong> it's passed to the `alert()` box.
 
 ### PREP 
 
-If you have your own web server, download and use the <a href="https://github.com/JimBarry/promises-how-to/blob/master/index.html"> index.html from this repo.</a><p> 
+If you have your own web server, download and use the <a href="https://github.com/JimBarry/promises-how-to/blob/master/index.html"> `index.html` from this repo.</a><p> 
 If you do not have your own web server, then you can use this: <a href="https://codepen.io/JimBarry/pen/jJgNBd"> Codepen.io sample here</a><p>
 Either way, now follow along...
 
@@ -14,7 +14,7 @@ Either way, now follow along...
 
 ## First do this:
 
-Run the index.html as-is (leaving the Promises stuff commented out). What's left is the simplest possible function call I could think of. 
+Run the `index.html` as-is (leaving the Promises stuff commented out). What's left is the simplest possible function call I could think of. 
 
 ## Then let's walk through this:
  
